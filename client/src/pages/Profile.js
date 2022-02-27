@@ -1,19 +1,16 @@
 import React from "react";
 import { Redirect, useParams } from "react-router-dom";
+import { useQuery, useMutation } from "@apollo/client";
+import { QUERY_USER, QUERY_ME } from "../utils/queries";
+
+import { ADD_FRIEND } from "../utils/mutations";
+import Auth from "../utils/auth";
 
 import PostList from "../components/PostList/postList";
-
-// TODO: when add friend is readSync, add useMutation here
-import { useQuery } from "@apollo/client";
-// import { useQuery, useMutation } from "@apollo/client";
-
-import { QUERY_USER, QUERY_ME } from "../utils/queries";
-import Auth from "../utils/auth";
 import PostForm from "../components/PostForm";
 
 const Profile = (props) => {
-  // TODO: add friend
-  // const [addFriend] = useMutation(ADD_FRIEND);
+  const [addFriend] = useMutation(ADD_FRIEND);
 
   const { username: userParam } = useParams();
 
@@ -36,15 +33,23 @@ const Profile = (props) => {
     return <h3>You need to be logged in to see this page</h3>;
   }
 
+  // add friend button
+  const handleClick = async () => {
+    try {
+      await addFriend({
+        variables: { id: user._id },
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   return (
     <div>
       <div>
         <h2>Viewing {userParam ? `${user.username}'s` : "your"} profile.</h2>
 
-        {/* TODO: add friend logic */}
-        {/* {userParam && (
-      <button onCLick={handleClick}>Add Friend</button>
-     )} */}
+        {userParam && <button onClick={handleClick}>Add Friend</button>}
       </div>
 
       <div>

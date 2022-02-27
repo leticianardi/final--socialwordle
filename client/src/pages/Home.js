@@ -2,7 +2,9 @@ import React from "react";
 import PostList from "../components/PostList/postList";
 
 import { useQuery } from "@apollo/client";
-import { QUERY_POSTS, QUERY_ME_BASIC } from "../utils/queries";
+import { QUERY_POSTS } from "../utils/queries";
+// TODO: when friend list is done, use the next import
+// import { QUERY_POSTS, QUERY_ME_BASIC } from "../utils/queries";
 import Auth from "../utils/auth";
 
 //TODO:
