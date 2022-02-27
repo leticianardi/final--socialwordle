@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
 import "../../styles/Topbar.css";
 
+
 const Topbar = () => {
   const logout = (event) => {
     event.preventDefault();
@@ -16,7 +17,7 @@ const Topbar = () => {
           <h1>Social Wordle</h1>
         </Link>
       </div>
-      
+
       <div className="nav-links">
         <nav className="nav-links-items">
           {Auth.loggedIn() ? (

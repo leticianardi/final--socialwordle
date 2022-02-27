@@ -49,8 +49,7 @@ function App() {
             </div>
             <div></div>
             <Switch>
-            <Frontpage />
-            {/* <Route exact path="/" component={Frontpage} /> */}
+            <Route exact path="/" component={Frontpage} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             {/* <Route exact path="/profile/:username?" component={Profile} /> */}

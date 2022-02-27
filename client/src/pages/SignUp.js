@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
-
+import "../styles/Signup.css";
 const SignUp = () => {
   const [formState, setFormState] = useState({
     username: "",
@@ -40,39 +40,39 @@ const SignUp = () => {
   return (
     <main>
       <div>
-        <div>
-          <h3> Sign Up</h3>
-
-          <div>
-            <form onSubmit={handleFormSubmit}>
-              <input
-                placeholder="Your username"
-                name="username"
-                type="username"
-                id="username"
-                value={formState.username}
-                onChange={handleChange}
-              />
-              <input
-                placeholder="Your email"
-                name="email"
-                type="email"
-                id="email"
-                value={formState.email}
-                onChange={handleChange}
-              />
-              <input
-                placeholder="******"
-                name="password"
-                type="password"
-                id="password"
-                value={formState.password}
-                onChange={handleChange}
-              />
-              <button type="submit">Submit</button>
-            </form>
-            {error && <div>Sign up failed</div>}
-          </div>
+        <div className="title">
+          <h3>Sign Up</h3>
+        </div>
+        
+        <div className="form-inputs">
+          <form onSubmit={handleFormSubmit}>
+            <input
+              placeholder="Your username"
+              name="username"
+              type="username"
+              id="username"
+              value={formState.username}
+              onChange={handleChange}
+            />
+            <input
+              placeholder="Your email"
+              name="email"
+              type="email"
+              id="email"
+              value={formState.email}
+              onChange={handleChange}
+            />
+            <input
+              placeholder="******"
+              name="password"
+              type="password"
+              id="password"
+              value={formState.password}
+              onChange={handleChange}
+            />
+            <button type="submit">Submit</button>
+          </form>
+          {error && <div>Sign up failed</div>}
         </div>
       </div>
     </main>
