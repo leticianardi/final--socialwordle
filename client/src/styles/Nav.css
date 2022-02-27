@@ -1,0 +1,10 @@
+.nav {
+ height: 10vh;
+ margin: 10px 10px;
+ display: flex-row;
+}
+
+.nav-items {
+ display: flex-rox;
+ justify-content: space around;
+}

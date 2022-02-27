@@ -13,9 +13,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import Home from "./pages/Home";
 // import Login from "./pages/Login";
-import Game from "./pages/Game"
+import Nav from "./components/Nav/nav"
 import Frontpage from "./pages/Frontpage";
-import Footer from "./components/Footer/Footer";
+//import Footer from "./components/Footer/Footer";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -42,10 +42,12 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <div className="container">
-            <div></div>
+            <div>
+              <Nav />
+            </div>
             <div></div>
             {/* <Switch> */}
-            <Game />
+            <Frontpage />
             {/* <Route exact path="/" component={Frontpage} /> */}
             {/* <Route exact path="/login" component={Login} /> */}
             {/* <Route exact path="/signup" component={Signup} /> */}
@@ -54,7 +56,7 @@ function App() {
             {/* <Route component={NoMatch} /> */}
             {/* </Switch> */}
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
     </ApolloProvider>

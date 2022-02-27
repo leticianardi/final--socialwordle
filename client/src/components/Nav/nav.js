@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
+import "../../styles/Nav.css"
 
 const Nav = () => {
   const logout = (event) => {
@@ -9,8 +10,8 @@ const Nav = () => {
   };
 
   return (
-    <header className="flex-row align-center">
-      <div className="container flex-row">
+    <header className="nav">
+      <div className="nav-items">
         <Link to="/">
           <h1>Social Wordle</h1>
         </Link>
