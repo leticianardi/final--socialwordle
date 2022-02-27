@@ -8,13 +8,14 @@ import {
 } from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Topbar from "./components/Topbar/Topbar";
 // import Home from "./pages/Home";
-// import Login from "./pages/Login";
-import Nav from "./components/Nav/nav"
+import Login from "./pages/Login";
+import Signup from "./pages/SignUp";
 import Frontpage from "./pages/Frontpage";
+
 //import Footer from "./components/Footer/Footer";
 
 const httpLink = createHttpLink({
@@ -41,20 +42,21 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
+          <Topbar />
           <div className="container">
             <div>
-              <Nav />
+              {/* <Nav /> */}
             </div>
             <div></div>
-            {/* <Switch> */}
+            <Switch>
             <Frontpage />
             {/* <Route exact path="/" component={Frontpage} /> */}
-            {/* <Route exact path="/login" component={Login} /> */}
-            {/* <Route exact path="/signup" component={Signup} /> */}
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
             {/* <Route exact path="/profile/:username?" component={Profile} /> */}
             {/* <Route exact path="/post/:id" component={SinglePost} /> */}
             {/* <Route component={NoMatch} /> */}
-            {/* </Switch> */}
+            </Switch>
           </div>
           {/* <Footer /> */}
         </div>

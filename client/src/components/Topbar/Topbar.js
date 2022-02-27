@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
-import "../../styles/Nav.css"
+import "../../styles/Topbar.css";
 
-const Nav = () => {
+const Topbar = () => {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -11,12 +11,14 @@ const Nav = () => {
 
   return (
     <header className="nav">
-      <div className="nav-items">
+      <div className="nav-title">
         <Link to="/">
           <h1>Social Wordle</h1>
         </Link>
-
-        <nav className="text-center">
+      </div>
+      
+      <div className="nav-links">
+        <nav className="nav-links-items">
           {Auth.loggedIn() ? (
             <>
               <Link to="/profile">My profile</Link>
@@ -36,4 +38,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Topbar;

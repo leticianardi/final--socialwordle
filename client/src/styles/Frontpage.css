@@ -1,9 +1,8 @@
 .front-section {
   display: flex;
-  height: 70vh;
-  background-color: black;
-  width: 100%;
-  color: whitesmoke;
+  height: 70%;
+  width: 80%;
+  color: black;
 }
 
 .front-left {
@@ -29,12 +28,12 @@
 .front-intro {
   font-size: 30px;
   font-weight: 300;
-  color: whitesmoke;
+  color: gray;
 }
 
 .front-name {
   font-size: 60px;
-  color: white;
+  color: black;
 }
 
 .front-title {
