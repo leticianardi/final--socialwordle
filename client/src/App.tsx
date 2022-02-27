@@ -15,6 +15,7 @@ import Topbar from "./components/Topbar/Topbar";
 import Login from "./pages/Login";
 import Signup from "./pages/SignUp";
 import Frontpage from "./pages/Frontpage";
+import Game from "./pages/Game"
 
 //import Footer from "./components/Footer/Footer";
 
@@ -52,6 +53,7 @@ function App() {
             <Route exact path="/" component={Frontpage} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
+            <Route exact path="/play" component={Game} />
             {/* <Route exact path="/profile/:username?" component={Profile} /> */}
             {/* <Route exact path="/post/:id" component={SinglePost} /> */}
             {/* <Route component={NoMatch} /> */}

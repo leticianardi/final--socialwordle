@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
 import "../../styles/Topbar.css";
 
-
 const Topbar = () => {
   const logout = (event) => {
     event.preventDefault();
@@ -23,6 +22,7 @@ const Topbar = () => {
           {Auth.loggedIn() ? (
             <>
               <Link to="/profile">My profile</Link>
+              <Link to="/play">Play</Link>
               <a href="/" onClick={logout}>
                 Logout
               </a>
