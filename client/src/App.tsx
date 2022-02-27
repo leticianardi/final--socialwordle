@@ -13,7 +13,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import Home from "./pages/Home";
 // import Login from "./pages/Login";
-// import Game from "./pages/Game"
+import Game from "./pages/Game"
 import Frontpage from "./pages/Frontpage";
 import Footer from "./components/Footer/Footer";
 
@@ -45,7 +45,8 @@ function App() {
             <div></div>
             <div></div>
             {/* <Switch> */}
-            <Route exact path="/" component={Frontpage} />
+            <Game />
+            {/* <Route exact path="/" component={Frontpage} /> */}
             {/* <Route exact path="/login" component={Login} /> */}
             {/* <Route exact path="/signup" component={Signup} /> */}
             {/* <Route exact path="/profile/:username?" component={Profile} /> */}

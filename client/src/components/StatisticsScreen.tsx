@@ -17,7 +17,7 @@ export function StatisticsScreen({
       <div className="d-flex align-items-center justify-content-center">
         <Button
           onClick={handleCloseScreen}
-          label='FECHAR'
+          label='CLOSE'
         />
       </div>
     </div>

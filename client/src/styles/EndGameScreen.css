@@ -11,9 +11,9 @@
   color: #2271B2;
 }
 
-.lose-text {
+/* .lose-text {
   color: #943e3c;
-}
+} */
 
 .lose-text.colorblind {
   color: #D55E00;

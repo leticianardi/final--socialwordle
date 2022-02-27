@@ -30,43 +30,42 @@ function HowToPlayScreen(props: OverlayScreenProps) {
   return (
     <Overlay content={
       <div className="content">
-        <h1 className="text-center">COMO JOGAR</h1>
+        <h1 className="text-center">How to Play</h1>
 
         <p className="text-center">
-          Todos os dias, uma nova palavra aparecerá no Letreco para você adivinhar.<br/>
-          Você terá 6 tentativas. Cada uma delas deve ser uma palavra que exista.<br/>
-          Acentos e cedilha são ignorados, tanto nas tentativas, quanto na resposta.<br/>
-          Após chutar, as letras mudarão para indicar o quão perto você está da resposta.
+          Every day, a new word is set for you to guess.<br/>
+          You only have 6 guesses. You can't make up words.<br/>
+          After guessing, the letters you change color to indicate it was a match, mispleced or if it isn't present.<br/>
         </p>
 
         <hr/>
 
-        <p className="text-center">Se uma letra ficar {colorblind ? 'redonda' : 'verde'}, ela está presente na palavra e na posição correta.</p>
+        <p className="text-center">If the letter gets {colorblind ? 'redonda' : 'green'}, it's part of the word and in the right place.</p>
         <div className="d-flex justify-content-center align-items-center mb-4">
-          <GuessExample word='CERTO' exampleState='right' />
+          <GuessExample word='RIGHT' exampleState='right' />
         </div>
 
-        <p className="text-center">Se uma letra ficar {colorblind ? 'pontilhada' : 'amarela'}, ela está presente na palavra, mas na posição errada.</p>
+        <p className="text-center">If the letter gets {colorblind ? 'pontilhada' : 'yellow'}, it's part of the word, but it's misplaced.</p>
         <div className="d-flex justify-content-center align-items-center mb-4">
-          <GuessExample word='QUASE' exampleState='displaced' />
+          <GuessExample word='THOSE' exampleState='displaced' />
         </div>
 
-        <p className="text-center">Se uma letra ficar {colorblind ? 'desta cor' : 'vermelha'}, ela NÃO está na palavra.</p>
+        <p className="text-center">If the letter gets {colorblind ? 'desta cor' : 'gray'}, it's not part of the word.</p>
         <div className="d-flex justify-content-center align-items-center mb-4">
-          <GuessExample word='FALHA' exampleState='wrong' />
+          <GuessExample word='WRONG' exampleState='wrong' />
         </div>
 
         <p className="text-center credits">
-          criado por <a href="https://gabtoschi.com" target="_blank" rel="noreferrer">Gabriel Toschi</a><br/>
-          banco de palavras por <a href="https://pt-br.libreoffice.org/projetos/vero" target="_blank" rel="noreferrer">VERO</a><br/>
-          versão brasileira não-oficial do <a href="https://www.powerlanguage.co.uk/wordle/" target="_blank" rel="noreferrer">Wordle</a><br/>
+          created by <a href="https://gabtoschi.com" target="_blank" rel="noreferrer">Gabriel Toschi</a><br/>
+          Portuguese word bank: <a href="https://pt-br.libreoffice.org/projetos/vero" target="_blank" rel="noreferrer">VERO</a><br/>
+          non-offical Portuguese version of <a href="https://www.powerlanguage.co.uk/wordle/" target="_blank" rel="noreferrer">Wordle</a><br/>
           powered by <a href="https://pt-br.reactjs.org/" target="_blank" rel="noreferrer">React</a>, <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap</a>, <a href="https://pages.github.com/" target="_blank" rel="noreferrer">GitHub Pages</a><br/>
         </p>
 
         <div className="d-flex align-items-center justify-content-center">
           <Button
             onClick={props.handleCloseScreen}
-            label='FECHAR'
+            label='CLOSE'
           />
         </div>
 

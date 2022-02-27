@@ -31,7 +31,7 @@
 }
 
 .wrong {
-  background-color: #943e3c;
+  background-color: #BBB8BB;
   color: #f4f3f1;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .wrong:disabled {
-  background-color: rgba(148, 62, 60, 0.65);
+  background-color: #BBB8BB;
 }
 
 .wrong.colorblind:disabled {
@@ -48,7 +48,7 @@
 }
 
 .displaced {
-  background-color: #c79c2e;
+  background-color: #EBBA27;
   color: #f4f3f1;
 }
 

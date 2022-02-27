@@ -1,89 +1,90 @@
-import '../styles/Header.css';
-import { BsFillBarChartLineFill, BsFillGearFill, BsQuestionLg, BsTwitter } from "react-icons/bs"
-import HowToPlayScreen from './HowToPlayScreen';
-import { shuffleArray } from '../utils';
-import { useContext, useState } from 'react';
-import SettingsScreen from './SettingsScreen';
-import { GlobalSettingsContext } from '../hooks/useGlobalSettings';
-import { StatisticsScreen } from './StatisticsScreen';
+import "../styles/Header.css";
+import {
+  BsFillBarChartLineFill,
+  BsFillGearFill,
+  BsQuestionLg,
+  BsGithub,
+} from "react-icons/bs";
+import HowToPlayScreen from "./HowToPlayScreen";
+// import { shuffleArray } from '../utils';
+import { useState } from "react";
+import SettingsScreen from "./SettingsScreen";
+// import { GlobalSettingsContext } from '../hooks/useGlobalSettings';
+import { StatisticsScreen } from "./StatisticsScreen";
 
-const APP_NAME = 'LETRECO';
-const TWITTER_URL = 'https://twitter.com/meuletreco';
+// const APP_NAME = 'wording';
+const GITHUB_URL = "https://github.com/leticianardi/project-socialwordle";
 
 function Header() {
-  const [{isColorblindModeActive}] = useContext(GlobalSettingsContext);
+  // const [{isColorblindModeActive}] = useContext(GlobalSettingsContext);
 
   const [isHowToPlayOpen, setIsHowToPlayOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isStatisticsOpen, setIsStatisticsOpen] = useState(false);
 
-  const shuffledIndexes = shuffleArray(Array.from(Array(APP_NAME.length).keys()));
-  const appName = APP_NAME.split('').map((letter, index) => {
-    let className = '';
+  // const shuffledIndexes = shuffleArray(Array.from(Array(APP_NAME.length).keys()));
+  // const appName = APP_NAME.split('').map((letter, index) => {
+  //   let className = '';
 
-    if (index === shuffledIndexes[0]) className = 'letter-green';
-    if (index === shuffledIndexes[1]) className = 'letter-yellow';
-    if (index === shuffledIndexes[2]) className = 'letter-red';
+  //   if (index === shuffledIndexes[0]) className = 'letter-green';
+  //   if (index === shuffledIndexes[1]) className = 'letter-yellow';
+  //   if (index === shuffledIndexes[2]) className = 'letter-red';
 
-    if (isColorblindModeActive) className += ' colorblind';
+  //   if (isColorblindModeActive) className += ' colorblind';
 
-    return (<span key={index.toString()} className={className}>{letter}</span>)
-  });
+  //   return (<span key={index.toString()} className={className}>{letter}</span>)
+  // });
 
   return (
     <div className="mt-3 mb-4 d-flex align-items-center justify-content-around">
-      {isHowToPlayOpen &&
-        <HowToPlayScreen
-          handleCloseScreen={() => setIsHowToPlayOpen(false)}
-        />
-      }
+      {isHowToPlayOpen && (
+        <HowToPlayScreen handleCloseScreen={() => setIsHowToPlayOpen(false)} />
+      )}
 
-      {isSettingsOpen &&
-        <SettingsScreen
-          handleCloseScreen={() => setIsSettingsOpen(false)}
-        />
-      }
+      {isSettingsOpen && (
+        <SettingsScreen handleCloseScreen={() => setIsSettingsOpen(false)} />
+      )}
 
-      {isStatisticsOpen &&
+      {isStatisticsOpen && (
         <StatisticsScreen
           handleCloseScreen={() => setIsStatisticsOpen(false)}
         />
-      }
+      )}
 
-      <div className='d-flex'>
+      <div className="d-flex">
         <button
-          className='header-button rounded d-flex align-items-center justify-content-center py-2 me-2'
+          className="header-button rounded d-flex align-items-center justify-content-center py-2 me-2"
           onClick={() => setIsHowToPlayOpen(true)}
         >
           <BsQuestionLg />
         </button>
 
         <button
-          className='header-button rounded d-flex align-items-center justify-content-center py-2'
-          onClick={() => window.open(TWITTER_URL, '_blank')}
+          className="header-button rounded d-flex align-items-center justify-content-center py-2"
+          onClick={() => window.open(GITHUB_URL, "_blank")}
         >
-          <BsTwitter />
+          <BsGithub />
         </button>
       </div>
 
-      <h1 className="text-center mb-0 app-name">{appName}</h1>
+      {/* <h1 className="text-center mb-0 app-name">{appName}</h1> */}
+      <h1 className="text-center mb-0 app-name">wording</h1>
 
-      <div className='d-flex'>
+      <div className="d-flex">
         <button
-          className='header-button rounded d-flex align-items-center justify-content-center py-2 me-2'
+          className="header-button rounded d-flex align-items-center justify-content-center py-2 me-2"
           onClick={() => setIsStatisticsOpen(true)}
         >
           <BsFillBarChartLineFill />
         </button>
 
         <button
-          className='header-button rounded d-flex align-items-center justify-content-center py-2'
+          className="header-button rounded d-flex align-items-center justify-content-center py-2"
           onClick={() => setIsSettingsOpen(true)}
         >
           <BsFillGearFill />
         </button>
       </div>
-
     </div>
   );
 }

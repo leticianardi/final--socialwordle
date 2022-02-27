@@ -65,34 +65,34 @@ export function StatisticsView() {
 
   return (
     <div>
-      <h3 className="text-center">estatísticas</h3>
+      <h3 className="text-center">statistics</h3>
 
       <div className="row text-center">
         <div className="col-3 d-flex flex-column">
           <h4>{ allGames }</h4>
-          <span className='data-label'>letrecos jogados</span>
+          <span className='data-label'>wording played</span>
         </div>
 
         <div className="col-3 d-flex flex-column">
           <h4>{ wonPercentageStr }</h4>
-          <span className='data-label'>de vitória no jogo</span>
+          <span className='data-label'>of wins</span>
         </div>
 
         <div className="col-3 d-flex flex-column">
           <h4>{ currentStreak }</h4>
-          <span className='data-label'>sequência atual</span>
+          <span className='data-label'>current streak</span>
         </div>
 
         <div className="col-3 d-flex flex-column">
           <h4>{ maxStreak }</h4>
-          <span className='data-label'>maior sequência</span>
+          <span className='data-label'>best streak</span>
         </div>
       </div>
 
       <div className="row mt-4">
         <div className="col-7">
           <div className="w-100 h-100">
-            <p className="text-center mb-1">distribuição das partidas</p>
+            <p className="text-center mb-1">guess distribution</p>
 
             {
               distributionKeys.map((key, index) => (
@@ -119,7 +119,7 @@ export function StatisticsView() {
         </div>
 
         <div className="col-5 d-flex flex-column text-center justify-content-center">
-          <span>próximo letreco em:</span>
+          <span>next wording:</span>
           <h4>{ countdown }</h4>
         </div>
       </div>
