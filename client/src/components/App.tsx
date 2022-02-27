@@ -4,7 +4,7 @@ import '../styles/App.css';
 import { GlobalSettingsContext, useGlobalSettings } from "../hooks/useGlobalSettings";
 import { StatisticsContext, useStatistics } from "../hooks/useStatistics";
 
-function App() {
+function AppGame() {
   const globalSettings = useGlobalSettings();
   const statistics = useStatistics();
 
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppGame;
