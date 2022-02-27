@@ -18,7 +18,7 @@ const resolvers = {
     users: async () => {
       return User.find()
         .select("-__v -password")
-        .populate("thoughts")
+        .populate("posts")
         .populate("friends");
     },
     user: async (parent, { username }) => {
@@ -59,6 +59,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
     addPost: async (parent, args, context) => {
       if (context.user) {
         const post = await Post.create({
@@ -71,10 +72,13 @@ const resolvers = {
           { $push: { posts: post._id } },
           { new: true }
         );
+
         return post;
       }
+
       throw new AuthenticationError("You need to be logged in!");
     },
+
     addFriend: async (parent, { friendId }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
