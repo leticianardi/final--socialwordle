@@ -13,7 +13,7 @@ import SettingsScreen from "./SettingsScreen";
 import { StatisticsScreen } from "./StatisticsScreen";
 
 // const APP_NAME = 'wording';
-const GITHUB_URL = "https://github.com/leticianardi/project-socialwordle";
+const GITHUB_URL = "git@github.com:leticianardi/final--socialwordle.git";
 
 function Header() {
   // const [{isColorblindModeActive}] = useContext(GlobalSettingsContext);
