@@ -1,25 +1,34 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const PostList = ({ posts, title }) => {
   if (!posts.length) {
-    return <h3>No posts yet</h3>
+    return <h3>No posts yet</h3>;
   }
   return (
     <div>
       <h3>{title}</h3>
       {posts &&
-        posts.map(post => (
+        posts.map((post) => (
           <div key={post._id} className="card mb-3">
             <p className="card-header">
-              {post.username}
+              <Link
+                to={`/profile/${post.username}`}
+                style={{ fontWeight: 700 }}
+                className="text-light"
+              >
+                {post.username}
+              </Link>{" "}
               posted on {post.createdAt}
             </p>
             <div className="card-body">
-              <p>{post.postText}</p>
-              {/* <p className="mb-0">
-                Reactions: {post.reactionCount} || Click to{' '}
-                {post.reactionCount ? 'see' : 'start'} the discussion!
-              </p> */}
+              {/* <Link to={`/post/${post._id}`}>
+                <p>{post.postText}</p>
+                <p className="mb-0">
+                  Reactions: {post.reactionCount} || Click to{" "}
+                  {post.reactionCount ? "see" : "start"} the discussion!
+                </p>
+              </Link> */}
             </div>
           </div>
         ))}
@@ -27,4 +36,4 @@ const PostList = ({ posts, title }) => {
   );
 };
 
-export default PostList
+export default PostList;
