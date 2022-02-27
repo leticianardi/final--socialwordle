@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Game from "./pages/Game"
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -43,6 +44,7 @@ function App() {
           <div>testing routes piece</div>
           <div>
             <Home />
+            <Game />
           </div>
           <Switch>
               <Route exact path="/" component={Home} />
