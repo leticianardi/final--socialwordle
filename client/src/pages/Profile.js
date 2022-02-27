@@ -1,13 +1,13 @@
 import React from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { useQuery, useMutation } from "@apollo/client";
-import { QUERY_USER, QUERY_ME } from "../utils/queries";
 
+import { QUERY_USER, QUERY_ME } from "../utils/queries";
 import { ADD_FRIEND } from "../utils/mutations";
 import Auth from "../utils/auth";
 
+import PostForm from "../components/PostForm/PostForm";
 import PostList from "../components/PostList/postList";
-import PostForm from "../components/PostForm";
 
 const Profile = (props) => {
   const [addFriend] = useMutation(ADD_FRIEND);
@@ -19,6 +19,17 @@ const Profile = (props) => {
   });
 
   const user = data?.me || data?.user || {};
+
+  // add friend button
+  const handleClick = async () => {
+    try {
+      await addFriend({
+        variables: { id: user._id },
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   // redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
@@ -32,17 +43,6 @@ const Profile = (props) => {
   if (!user?.username) {
     return <h3>You need to be logged in to see this page</h3>;
   }
-
-  // add friend button
-  const handleClick = async () => {
-    try {
-      await addFriend({
-        variables: { id: user._id },
-      });
-    } catch (e) {
-      console.error(e);
-    }
-  };
 
   return (
     <div>
