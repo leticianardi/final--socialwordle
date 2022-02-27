@@ -51,6 +51,8 @@ Variable:
 
 ## POST MUTATIONS
 
+### add a post
+
 ```
 mutation addPost($postText: String!) {
   addPost(postText: $postText) {
@@ -76,6 +78,17 @@ Header:
 {
   "Authorization": "token_number"
 }
+```
+
+### get all posts
+
+```
+query {
+  posts {
+    _id
+    username
+    postText
+  }
 ```
 
 ## FRIEND MUTATIONS

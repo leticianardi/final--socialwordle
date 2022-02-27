@@ -11,9 +11,11 @@ import { setContext } from "@apollo/client/link/context";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Game from "./pages/Game"
+// import Home from "./pages/Home";
+// import Login from "./pages/Login";
+// import Game from "./pages/Game"
+import Frontpage from "./pages/Frontpage";
+import Footer from "./components/Footer/Footer";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -38,25 +40,21 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-      <div className="flex-column justify-flex-start min-100-vh">
-        <div>Header goes here</div>
-        <div className="container">
-          <div>testing routes piece</div>
-          <div>
-            <Home />
-            <Game />
+        <div className="flex-column justify-flex-start min-100-vh">
+          <div className="container">
+            <div></div>
+            <div></div>
+            {/* <Switch> */}
+            <Route exact path="/" component={Frontpage} />
+            {/* <Route exact path="/login" component={Login} /> */}
+            {/* <Route exact path="/signup" component={Signup} /> */}
+            {/* <Route exact path="/profile/:username?" component={Profile} /> */}
+            {/* <Route exact path="/post/:id" component={SinglePost} /> */}
+            {/* <Route component={NoMatch} /> */}
+            {/* </Switch> */}
           </div>
-          <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/login" component={Login} />
-              {/* <Route exact path="/signup" component={Signup} /> */}
-              {/* <Route exact path="/profile/:username?" component={Profile} /> */}
-              {/* <Route exact path="/post/:id" component={SinglePost} /> */}
-              {/* <Route component={NoMatch} /> */}
-            </Switch>
+          <Footer />
         </div>
-        {/* <Footer /> */}
-      </div>
       </Router>
     </ApolloProvider>
   );

@@ -1,0 +1,17 @@
+.footer {
+  height: 10vh;
+  margin: 30px 0px 30px 0px;
+}
+
+.f-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.c-info-item {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  width: 70%;
+}
