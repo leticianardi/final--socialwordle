@@ -1,34 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../styles/PostList.css"
 
 const PostList = ({ posts, title }) => {
   if (!posts.length) {
     return <h3>No posts yet</h3>;
   }
   return (
-    <div>
+    <div className="container">
       <h3>{title}</h3>
       {posts &&
         posts.map((post) => (
-          <div key={post._id} className="card mb-3">
-            <p className="card-header">
+          <div key={post._id} className="card-box">
+            <p className="card-title">
               <Link
                 to={`/profile/${post.username}`}
                 style={{ fontWeight: 700 }}
-                className="text-light"
               >
                 {post.username}
               </Link>{" "}
               posted on {post.createdAt}
             </p>
             <div className="card-body">
-              {/* <Link to={`/post/${post._id}`}>
+              <Link to={`/post/${post._id}`}>
                 <p>{post.postText}</p>
-                <p className="mb-0">
+                {/* <p className="mb-0">
                   Reactions: {post.reactionCount} || Click to{" "}
                   {post.reactionCount ? "see" : "start"} the discussion!
-                </p>
-              </Link> */}
+                </p> */}
+              </Link>
             </div>
           </div>
         ))}

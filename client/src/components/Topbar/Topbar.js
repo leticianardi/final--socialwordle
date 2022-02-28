@@ -21,6 +21,7 @@ const Topbar = () => {
         <nav className="nav-links-items">
           {Auth.loggedIn() ? (
             <>
+              <Link to="/home">Home</Link>
               <Link to="/profile">Profile</Link>
               <Link to="/play">Play</Link>
               <Link to="/score">Score</Link>

@@ -1,5 +1,6 @@
 import React from "react";
 import PostList from "../components/PostList/PostList";
+import PostForm from "../components/PostForm/PostForm";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_POSTS } from "../utils/queries";
@@ -12,7 +13,6 @@ import Auth from "../utils/auth";
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_POSTS);
-  // TODO: 
   // const { data: userData } = useQuery(QUERY_ME_BASIC);
   const posts = data?.posts || [];
   console.log(posts);
@@ -22,6 +22,12 @@ const Home = () => {
   return (
     <main>
       <div>
+        {loggedIn && (
+          <div>
+            <PostForm />
+          </div>
+        )}
+
         <div className={` col-12 mb-3 ${loggedIn}`}>
           {loading ? (
             <div>Loading...</div>
@@ -30,7 +36,6 @@ const Home = () => {
           )}
         </div>
 
-{/* TODO: friends list */}
         {/* {loggedIn && userData ? (
           <div className="col-12 col-lg-3 mb-3">
             <FriendList
@@ -40,7 +45,6 @@ const Home = () => {
             />
           </div>
         ) : null} */}
-
       </div>
     </main>
   );
