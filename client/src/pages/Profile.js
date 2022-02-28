@@ -8,7 +8,8 @@ import Auth from "../utils/auth";
 
 import PostForm from "../components/PostForm/PostForm";
 import PostList from "../components/PostList/PostList";
-import "../styles/Profile.css"
+import FriendList from "../components/FriendList/Friends";
+import "../styles/Profile.css";
 
 const Profile = (props) => {
   const [addFriend] = useMutation(ADD_FRIEND);
@@ -21,7 +22,6 @@ const Profile = (props) => {
 
   const user = data?.me || data?.user || {};
 
-  // TODO:
   // add friend button
   const handleClick = async () => {
     try {
@@ -59,17 +59,16 @@ const Profile = (props) => {
         </div>
       </div>
 
-      {/* TODO: friends list */}
-      {/* <div>
+      <div>
         <FriendList
           username={user.username}
           friendCount={user.friendCount}
           friends={user.friends}
         />
-      </div> */}
-      
+      </div>
+
       <div className="post-form">
-      <div>{!userParam && <PostForm />}</div>
+        <div>{!userParam && <PostForm />}</div>
       </div>
     </div>
   );

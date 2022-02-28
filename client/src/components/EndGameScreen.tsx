@@ -57,7 +57,7 @@ function EndGameScreen(props: EndGameScreenProps) {
                   (props.isGameWon ? "win-text" : "lose-text")
                 }
               >
-                You {props.isGameWon ? "acergot it!" : "didn't get it..."}
+                You {props.isGameWon ? "got it!" : "didn't get it..."}
               </h1>
               <p className="text-center mb-1">
                 the word of the day was: <b>{props.dailyWord.word}</b>

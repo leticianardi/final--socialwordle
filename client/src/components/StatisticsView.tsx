@@ -70,7 +70,7 @@ export function StatisticsView() {
       <div className="row text-center">
         <div className="col-3 d-flex flex-column">
           <h4>{ allGames }</h4>
-          <span className='data-label'>wording played</span>
+          <span className='data-label'>words guessed</span>
         </div>
 
         <div className="col-3 d-flex flex-column">

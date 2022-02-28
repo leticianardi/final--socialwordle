@@ -2,7 +2,6 @@
   border: 2px solid #252525;
   width: 48px;
   height: 40px;
-
   font-size: 20px;
   font-weight: bolder;
 }
@@ -32,7 +31,7 @@
 .right {
   border: 1px solid #252525;
   background-color: #51b36e;
-  color: #f4f3f1;
+  /* color: #f4f3f1; */
 }
 
 .right.colorblind {
