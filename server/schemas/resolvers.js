@@ -83,7 +83,19 @@ const resolvers = {
 
       throw new AuthenticationError("You need to be logged in!");
     },
-
+    addReply: async (parent, { postId, replyBody }, context) => {
+      if (context.user) {
+        const updatedPost = await Post.findByIdAndUpdate(
+          { _id: postId },
+          {
+            $push: { replies: { replyBody, username: context.user.username } },
+          },
+          { new: true, runValidators: true }
+        );
+        return updatedPost;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
     addFriend: async (parent, { friendId }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(

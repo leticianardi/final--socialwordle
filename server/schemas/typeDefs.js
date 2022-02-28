@@ -15,6 +15,15 @@ const typeDefs = gql`
     postText: String
     createdAt: String
     username: String
+    replyCount: Int
+    replies: [Reply]
+  }
+
+  type Reply {
+    _id: ID
+    replyBody: String
+    createdAt: String
+    username: String
   }
 
   type Query {
@@ -35,6 +44,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     updateUser(username: String, email: String, password:String): User
     addPost(postText: String!): Post
+    addReply(postId: ID!, replyBody: String!): Post
     addFriend(friendId: ID!): User
   }
 `;
