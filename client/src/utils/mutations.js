@@ -35,6 +35,21 @@ export const ADD_POST = gql`
   }
 `;
 
+export const ADD_REPLY = gql`
+mutation addReply($postId: ID!, $replyBody: String!) {
+  addReply(postId: $postId, replyBody: $replyBody) {
+    _id
+    replyCount
+    replies {
+      _id
+      replyBody
+      createdAt
+      username
+    }
+  }
+}
+`
+
 export const ADD_FRIEND = gql`
   mutation addFriend($id: ID!) {
     addFriend(friendId: $id) {

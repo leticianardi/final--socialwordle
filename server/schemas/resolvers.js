@@ -43,11 +43,14 @@ const resolvers = {
 
       return { token, user };
     },
-    // updatedUser: async (parent, args, context) => {
-    //   if (context.user) {
-    //     return await User.findByIdAndUpdate(context.user._id, args, { new: true })
-    //   }
-    // },
+    updatedUser: async (parent, args, context) => {
+      if (context.user) {
+        return await User.findByIdAndUpdate(context.user._id, args, {
+          new: true,
+        });
+      }
+      throw new AuthenticationError("You need to be logged in");
+    },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -83,6 +86,16 @@ const resolvers = {
 
       throw new AuthenticationError("You need to be logged in!");
     },
+
+    // deletePost: async (parente, args, context) => {
+    //   if (context.user) {
+    //     const deletePost = await Post.findByIdAndDelete(
+    //       {_id: postId};
+    //       );
+    //       return {_id: deletePost._id, }
+    //   }
+    // };
+
     addReply: async (parent, { postId, replyBody }, context) => {
       if (context.user) {
         const updatedPost = await Post.findByIdAndUpdate(

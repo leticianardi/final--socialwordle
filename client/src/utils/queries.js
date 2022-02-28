@@ -7,6 +7,13 @@ export const QUERY_POSTS = gql`
       postText
       createdAt
       username
+      replyCount
+      replies {
+        _id
+        createdAt
+        username
+        replyBody
+      }
     }
   }
 `;
@@ -18,6 +25,13 @@ export const QUERY_POST = gql`
       postText
       createdAt
       username
+      replyCount
+      replies {
+        _id
+        createdAt
+        username
+        replyBody
+      }
     }
   }
 `;
@@ -37,6 +51,7 @@ export const QUERY_USER = gql`
         _id
         postText
         createdAt
+        replyCount
       }
     }
   }
@@ -53,6 +68,13 @@ export const QUERY_ME = gql`
         _id
         postText
         createdAt
+        replyCount
+        replies {
+          _id
+          createdAt
+          replyBody
+          username
+        }
       }
       friends {
         _id
