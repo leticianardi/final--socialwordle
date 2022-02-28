@@ -1,24 +1,26 @@
-import React from 'react'
+import React from "react";
 
-export default function Profiles() {
-  return (
-    <div id="profile">
-      {Item()}
-    </div>
-  )
+export default function Profiles({ Leaderboard }) {
+  return <div id="profile">{Item(Leaderboard)}</div>;
 }
 
-function Item() {
+function Item(data) {
   return (
-  <div>
-    <div>
-      {/* <img></img> */}
-      <div>
-        <h3 className='info'>Name</h3>
-        <span>Location</span>
-      </div>
-    </div>
-    <div className='item'>Score</div>
-  </div>
-  )
+    <>
+      {data.map((value, index) => (
+        <div key={index}>
+          <div>
+            {/* <img></img> */}
+            <div>
+              <h3>{value.name}</h3>
+              <span>{value.location}</span>
+            </div>
+          </div>
+          <div>
+            <span>{value.score}</span>
+          </div>
+        </div>
+      ))}
+    </>
+  );
 }

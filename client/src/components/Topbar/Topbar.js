@@ -23,6 +23,7 @@ const Topbar = () => {
             <>
               <Link to="/profile">Profile</Link>
               <Link to="/play">Play</Link>
+              <Link to="/score">Score</Link>
               <a href="/" onClick={logout}>
                 Logout
               </a>
