@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_POST } from "../../utils/mutations";
 import { QUERY_POSTS, QUERY_ME } from "../../utils/queries";
+import "../../styles/PostForm.css";
 
 const PostForm = () => {
   const [postText, setText] = useState("");
@@ -48,24 +49,26 @@ const PostForm = () => {
   };
 
   return (
-    <div>
-      <p className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}>
-        Character Count: {characterCount}/280
-        {error && <span className="ml-2">Something went wrong...</span>}
-      </p>
-      <form
-        className="flex-row justify-center justify-space-between-md align-stretch"
-        onSubmit={handleFormSubmit}
-      >
+    <div className="containeir">
+      <div className="container-form">
+        <div className="form-title">
+          <p>Don't share the word of the day.</p>
+        </div>
+      </div>
+
+      <form onSubmit={handleFormSubmit}>
         <textarea
           placeholder="Share your results for today"
           value={postText}
-          className="form-input col-12 col-md-9"
           onChange={handleChange}
         ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
-          Submit
-        </button>
+        <p
+          className={` ${characterCount === 280 || error ? "text-error" : ""}`}
+        >
+          {characterCount}/280
+          {error && <span className="ml-2">Something went wrong...</span>}
+        </p>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

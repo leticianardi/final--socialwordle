@@ -1,0 +1,38 @@
+.container {
+  margin-top: 20px;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-form {
+  margin-top: 10px;
+}
+
+.form-title p {
+  margin-top: 2px;
+}
+
+form {
+  width: 80%;
+  height: 45vh;
+}
+
+textarea {
+  width: 70%;
+  height: 35vh;
+}
+
+textarea {
+  width: 90%;
+  margin: 10px 0px;
+  font-size: 1.2vw;
+  padding-left: 10px;
+}
+
+button {
+  padding: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  border: blue;
+}
