@@ -1,6 +1,7 @@
 {
-  "name": "letreco",
-  "homepage": "https://gabtoschi.github.io/letreco/",
+  "proxy": "http://localhost:3001",
+  "name": "socialwordle",
+  "homepage": "https://github.com/leticianardi/final--socialwordle",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

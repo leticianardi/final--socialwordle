@@ -21,7 +21,7 @@ const Topbar = () => {
         <nav className="nav-links-items">
           {Auth.loggedIn() ? (
             <>
-              <Link to="/profile">My profile</Link>
+              <Link to="/profile">Profile</Link>
               <Link to="/play">Play</Link>
               <a href="/" onClick={logout}>
                 Logout

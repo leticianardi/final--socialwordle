@@ -1,5 +1,5 @@
 import React from "react";
-import PostList from "../components/PostList/PostList";
+import PostList from "../components/PostList/postList";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_POSTS } from "../utils/queries";
@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <main>
-      <div className="flex-row justify-space-between">
+      <div>
         <div className={` col-12 mb-3 ${loggedIn}`}>
           {loading ? (
             <div>Loading...</div>

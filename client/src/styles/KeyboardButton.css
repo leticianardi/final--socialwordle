@@ -1,3 +1,5 @@
+
+
 .keyboard-button {
   border: solid 1px #252525;
   font-size: 16px;
@@ -31,7 +33,7 @@
 }
 
 .wrong {
-  background-color: #BBB8BB;
+  background-color: #979397;
   color: #f4f3f1;
 }
 
@@ -40,7 +42,7 @@
 }
 
 .wrong:disabled {
-  background-color: #BBB8BB;
+  background-color: #979397;  
 }
 
 .wrong.colorblind:disabled {

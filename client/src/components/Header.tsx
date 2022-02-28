@@ -68,7 +68,7 @@ function Header() {
       </div>
 
       {/* <h1 className="text-center mb-0 app-name">{appName}</h1> */}
-      <h1 className="text-center mb-0 app-name">wording</h1>
+      {/* <h1 className="text-center mb-0 app-name">wording</h1> */}
 
       <div className="d-flex">
         <button
