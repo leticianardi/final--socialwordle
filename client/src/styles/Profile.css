@@ -1,0 +1,18 @@
+.title {
+  justify-content: left;
+  padding-left: 5vh;
+}
+
+.post-list {
+  height: 100%;
+  margin-bottom: 20vh;
+}
+
+.post-form {
+  margin-top: 10vh;
+}
+
+textarea {
+  height: 15vh;
+  width: 70vh;
+}
