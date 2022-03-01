@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Post } = require("../models");
+const { User, Post, Scores } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -34,6 +34,9 @@ const resolvers = {
     post: async (parent, { _id }) => {
       return Post.findOne({ _id });
     },
+    scores: async () => {
+      return Scores.find({})
+    }
   },
 
   Mutation: {
@@ -121,6 +124,13 @@ const resolvers = {
       }
 
       throw new AuthenticationError("You need to be logged in!");
+    },
+    addScore: async (parent, args, context) => {
+        const scores = await Scores.create({
+          ...args,
+        });
+
+        return scores;
     },
   },
 };

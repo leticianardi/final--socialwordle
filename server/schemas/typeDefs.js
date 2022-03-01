@@ -26,12 +26,19 @@ const typeDefs = gql`
     username: String
   }
 
+  type Score {
+    _id: ID
+    score: String
+    userId: String
+  }
+
   type Query {
     me: User
     users: [User]
     user(username: String!): User
     posts(username: String): [Post]
     post(_id: ID!): Post
+    scores(limit: Int): [Score]
   }
 
   type Auth {
@@ -47,6 +54,7 @@ const typeDefs = gql`
     deletePost(_id: String!): Post
     addReply(postId: ID!, replyBody: String!): Post
     addFriend(friendId: ID!): User
+    addScore(score: String!, userId: String!): Score
   }
 `;
 
