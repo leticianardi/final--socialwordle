@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Topbar from "./components/Topbar/Topbar";
 import Score from "./components/Score/Score";
+import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/SignUp";
@@ -19,7 +20,6 @@ import SinglePost from "./pages/SinglePost";
 import Frontpage from "./pages/Frontpage";
 import Game from "./pages/Game";
 import Profile from "./pages/Profile";
-import Footer from "./components/Footer/Footer";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -61,7 +61,7 @@ function App() {
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
