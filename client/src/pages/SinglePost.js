@@ -1,12 +1,16 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useQuery } from "@apollo/client";
 
-// import Auth from "../utils/auth";
-import { QUERY_POST } from "../utils/queries";
+import ReplyList from "../components/ReplyList";
+import ReplyForm from "../components/ReplyForm";
+
+import Auth from "../utils/auth";
+import { useQuery } from "@apollo/client";
+import { QUERY_POST, QUERY_POST } from "../utils/queries";
 
 const SinglePost = (props) => {
   const { id: postId } = useParams();
+
   const { loading, data } = useQuery(QUERY_POST, {
     variables: { id: postId },
   });
@@ -20,14 +24,23 @@ const SinglePost = (props) => {
   return (
     <div>
       <div>
-        <p>A post goes here</p>
         <p>
-          <span style={{ fontWeight: 700 }}>{post.username}</span> posted on{" "}
-          {post.createdAt}
+          <span>
+            {reply.username}
+          </span>{" "}
+          post on {reply.createdAt}
         </p>
+        <div>
+          <p>{reply.postText}</p>
+        </div>
       </div>
+
+      {post.replyCount > 0 && (
+        <ReplyList replies={post.replies} />
+      )}
+      {Auth.loggedIn() && <ReplyForm postId={reply._id} />}
     </div>
   );
 };
 
-export default SinglePost;
+export default SinglePost
