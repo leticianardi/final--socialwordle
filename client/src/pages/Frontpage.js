@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Frontpage.css";
-import Logo from "../img/wording-logo.png";
+import Logo from "../img/Wordlingo-logo.png";
 
 const Frontpage = () => {
   return (
