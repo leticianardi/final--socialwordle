@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-const ReplyList = ({ replies}) => {
+const ReplyList = ({ replies }) => {
   return (
     <div>
     <div>
-      <span>Reply board</span>
+      <span>Response Board</span>
     </div>
     <div>
       {replies &&
-        replies.map((replies) => (
-          <p key={replies._id}>
-            {replies.replyBody} {"// "}
+        replies.map((reply) => (
+          <p key={reply._id}>
+            {reply.replyBody} {"// "}
               {replies.username} on {replies.createdAt}
           </p>
         ))}
