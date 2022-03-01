@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import ReplyList from "../components/ReplyList";
-import ReplyForm from "../components/ReplyForm";
+import ReplyList from "../components/ReplyList/ReplyList";
+import ReplyForm from "../components/ReplyForm/ReplyForm";
 
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
