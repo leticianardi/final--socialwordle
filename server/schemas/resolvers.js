@@ -43,14 +43,14 @@ const resolvers = {
 
       return { token, user };
     },
-    updatedUser: async (parent, args, context) => {
-      if (context.user) {
-        return await User.findByIdAndUpdate(context.user._id, args, {
-          new: true,
-        });
-      }
-      throw new AuthenticationError("You need to be logged in");
-    },
+    // updatedUser: async (parent, args, context) => {
+    //   if (context.user) {
+    //     return await User.findByIdAndUpdate(context.user._id, args, {
+    //       new: true,
+    //     });
+    //   }
+    //   throw new AuthenticationError("You need to be logged in");
+    // },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 

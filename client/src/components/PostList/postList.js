@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/PostList.css"
+import "../../styles/PostList.css";
 
 const PostList = ({ posts, title }) => {
   if (!posts.length) {
@@ -24,10 +24,10 @@ const PostList = ({ posts, title }) => {
             <div className="card-body">
               <Link to={`/post/${post._id}`}>
                 <p>{post.postText}</p>
-                {/* <p className="mb-0">
-                  Reactions: {post.reactionCount} || Click to{" "}
-                  {post.reactionCount ? "see" : "start"} the discussion!
-                </p> */}
+                <p className="mb-0">
+                  Replies: {post.replyCount} || Click to{" "}
+                  {post.replyCount ? "see the guesses" : "start guessing"}.
+                </p>
               </Link>
             </div>
           </div>
