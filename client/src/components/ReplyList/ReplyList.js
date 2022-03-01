@@ -11,8 +11,8 @@ const ReplyList = ({ replies }) => {
       {replies &&
         replies.map((reply) => (
           <p key={reply._id}>
-            {reply.replyBody} {"// "}
-              {replies.username} on {replies.createdAt}
+            {reply.replyBody} 
+              {replies.username} on {replies.create}
           </p>
         ))}
     </div>

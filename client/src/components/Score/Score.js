@@ -52,7 +52,7 @@ function timeFrame(data, timeFrame) {
 
   let filter = data.filter((val) => {
     let userDate = new Date(val.dt);
-    if (timeFrame == 0) return val;
+    if (timeFrame === 0) return val;
     return previous <= userDate && today >= userDate;
   });
 

@@ -15,7 +15,7 @@ import Score from "./components/Score/Score";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/SignUp";
-import SinglePost from "./pages/SinglePost";
+import SinglePost from "./pages/SinglePost"; 
 import Frontpage from "./pages/Frontpage";
 import Game from "./pages/Game";
 import Profile from "./pages/Profile";
