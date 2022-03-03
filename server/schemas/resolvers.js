@@ -1,5 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Post, Scores } = require("../models");
+const { post } = require("../models/Reply");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -35,8 +36,8 @@ const resolvers = {
       return Post.findOne({ _id });
     },
     scores: async () => {
-      return Scores.find({})
-    }
+      return Scores.find({});
+    },
   },
 
   Mutation: {
@@ -70,6 +71,12 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    deleteUser: async (parent, args, context) => {
+      if (context.user) {
+        const deleteUser = await User.findByIdAndDelete({ _id: args._id });
+      }
+      throw new AuthenticationError("Incorrect credentials");
+    },
 
     addPost: async (parent, args, context) => {
       if (context.user) {
@@ -92,12 +99,15 @@ const resolvers = {
 
     // deletePost: async (parente, args, context) => {
     //   if (context.user) {
-    //     const deletePost = await Post.findByIdAndDelete(
-    //       {_id: postId};
-    //       );
-    //       return {_id: deletePost._id, }
+    //     const deletePost = await User.findByIdAndUpdate(
+    //       { _id: context.post._id },
+    //       { $pull: { posts: post._id } },
+    //       { new: true }
+    //     );
+    //     return Post.findByIdAndDelete({ ...args });
     //   }
-    // };
+    //   return deletePost;
+    // },
 
     addReply: async (parent, { postId, replyBody }, context) => {
       if (context.user) {
@@ -126,11 +136,11 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
     addScore: async (parent, args, context) => {
-        const scores = await Scores.create({
-          ...args,
-        });
+      const scores = await Scores.create({
+        ...args,
+      });
 
-        return scores;
+      return scores;
     },
   },
 };
