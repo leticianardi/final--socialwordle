@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import { GlobalSettingsContext } from "../hooks/useGlobalSettings";
-import { GuessDistributionKeys, StatisticsContext } from "../hooks/useStatistics";
-import '../styles/StatisticsView.css';
+import { GlobalSettingsContext } from "../../hooks/useGlobalSettings";
+import { GuessDistributionKeys, StatisticsContext } from "../../hooks/useStatistics";
+import '../../styles/StatisticsView.css';
 
 const COUNTDOWN_SECOND = 1000;
 const DISTRIBUTION_FIXED_WIDTH = 12;

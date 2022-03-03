@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { BsCheckLg, BsFillBackspaceFill } from "react-icons/bs";
-import { GlobalSettingsContext } from "../hooks/useGlobalSettings";
-import { KeyboardButtonProps } from "../models";
-import '../styles/KeyboardButton.css';
+import { GlobalSettingsContext } from "../../hooks/useGlobalSettings";
+import { KeyboardButtonProps } from "../../models";
+import '../../styles/KeyboardButton.css';
 
 const mapIcon: { [icon: string]: () => JSX.Element } = {
   'back': () => (<BsFillBackspaceFill />),

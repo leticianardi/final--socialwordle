@@ -1,5 +1,5 @@
-import { OverlayProps } from "../models";
-import '../styles/Overlay.css';
+import { OverlayProps } from "../../models";
+import '../../styles/Overlay.css';
 
 function Overlay(props: OverlayProps) {
   return (

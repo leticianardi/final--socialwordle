@@ -1,10 +1,10 @@
 import { useContext, useMemo, useState } from "react";
-import { EndGameScreenProps } from "../models";
+import { EndGameScreenProps } from "../../models";
 import Button from "./Button";
 import Overlay from "./Overlay";
-import "../styles/EndGameScreen.css";
-import { getNormalEndGameMessage } from "../utils";
-import { GlobalSettingsContext } from "../hooks/useGlobalSettings";
+import "../../styles/EndGameScreen.css";
+import { getNormalEndGameMessage } from "../../utils";
+import { GlobalSettingsContext } from "../../hooks/useGlobalSettings";
 import { StatisticsView } from "./StatisticsView";
 
 function EndGameScreen(props: EndGameScreenProps) {

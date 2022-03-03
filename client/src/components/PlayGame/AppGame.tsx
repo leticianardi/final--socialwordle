@@ -1,8 +1,8 @@
 import Game from "./Game";
 import Header from "./Header";
-import '../styles/App.css';
-import { GlobalSettingsContext, useGlobalSettings } from "../hooks/useGlobalSettings";
-import { StatisticsContext, useStatistics } from "../hooks/useStatistics";
+import '../../styles/App.css';
+import { GlobalSettingsContext, useGlobalSettings } from "../../hooks/useGlobalSettings";
+import { StatisticsContext, useStatistics } from "../../hooks/useStatistics";
 
 function AppGame() {
   const globalSettings = useGlobalSettings();

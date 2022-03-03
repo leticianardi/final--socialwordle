@@ -1,5 +1,5 @@
-import { ButtonProps } from "../models";
-import '../styles/Button.css';
+import { ButtonProps } from "../../models";
+import '../../styles/Button.css';
 
 function Button(props: ButtonProps) {
   return (

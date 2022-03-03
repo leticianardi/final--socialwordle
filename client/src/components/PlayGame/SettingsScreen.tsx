@@ -1,9 +1,9 @@
 import Overlay from "./Overlay";
-import '../styles/SettingsScreen.css';
-import { OverlayScreenProps } from "../models";
+import '../../styles/SettingsScreen.css';
+import { OverlayScreenProps } from "../../models";
 import Button from "./Button";
 import { useContext } from "react";
-import { GlobalSettingsContext } from "../hooks/useGlobalSettings";
+import { GlobalSettingsContext } from "../../hooks/useGlobalSettings";
 
 // const SOCIAL_URLS = [
 //   { label: 'Twitter', url: 'https://twitter.com/meuletreco'},

@@ -1,8 +1,8 @@
 import { useContext, useEffect, useMemo, useState } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { GuessDistributionKeys, StatisticsContext } from '../hooks/useStatistics';
-import { DailyWord, GuessLetter, GuessLetterState, GuessValidationResult, KeyboardButtonStates, KeyboardLetterStates, SavedDailyGame } from '../models';
-import { getDailyWord, getLast, getToday, wordList } from '../utils';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { GuessDistributionKeys, StatisticsContext } from '../../hooks/useStatistics';
+import { DailyWord, GuessLetter, GuessLetterState, GuessValidationResult, KeyboardButtonStates, KeyboardLetterStates, SavedDailyGame } from '../../models';
+import { getDailyWord, getLast, getToday, wordList } from '../../utils';
 import EndGameScreen from './EndGameScreen';
 import GuessList from './GuessList';
 import Keyboard from './Keyboard';

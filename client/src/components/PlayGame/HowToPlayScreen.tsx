@@ -1,11 +1,11 @@
 import GuessLetterView from "./GuessLetterView";
 import Overlay from "./Overlay";
-import '../styles/HowToPlayScreen.css';
+import '../../styles/HowToPlayScreen.css';
 import Button from "./Button";
-import { getRandomInt } from "../utils";
-import { GuessLetterState, OverlayScreenProps } from "../models";
+import { getRandomInt } from "../../utils";
+import { GuessLetterState, OverlayScreenProps } from "../../models";
 import { useContext } from "react";
-import { GlobalSettingsContext } from "../hooks/useGlobalSettings";
+import { GlobalSettingsContext } from "../../hooks/useGlobalSettings";
 
 function GuessExample(props: {word: string, exampleState: GuessLetterState}) {
   const randomExample = getRandomInt(0, 5);

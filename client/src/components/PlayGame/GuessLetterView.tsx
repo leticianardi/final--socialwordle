@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { GlobalSettingsContext } from "../hooks/useGlobalSettings";
-import { GuessLetterViewProps } from "../models";
-import '../styles/GuessLetterView.css';
+import { GlobalSettingsContext } from "../../hooks/useGlobalSettings";
+import { GuessLetterViewProps } from "../../models";
+import '../../styles/GuessLetterView.css';
 
 function GuessLetterView(props: GuessLetterViewProps) {
   const [{isColorblindModeActive}] = useContext(GlobalSettingsContext);

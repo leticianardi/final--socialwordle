@@ -1,6 +1,6 @@
-import { OverlayScreenProps } from "../models";
+import { OverlayScreenProps } from "../../models";
 import Overlay from "./Overlay";
-import '../styles/SettingsScreen.css';
+import '../../styles/SettingsScreen.css';
 import { StatisticsView } from "./StatisticsView";
 import Button from "./Button";
 

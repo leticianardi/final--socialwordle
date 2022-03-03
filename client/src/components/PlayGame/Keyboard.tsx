@@ -1,4 +1,4 @@
-import { KeyboardProps } from '../models';
+import { KeyboardProps } from '../../models';
 import KeyboardButton from './KeyboardButton';
 
 const keyboardData: string[][] = [

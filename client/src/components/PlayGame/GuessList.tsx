@@ -1,5 +1,5 @@
-import { GuessLetter, GuessListProps } from "../models";
-import { completeArray } from "../utils";
+import { GuessLetter, GuessListProps } from "../../models";
+import { completeArray } from "../../utils";
 import { GUESS_LIST_SIZE, WORD_SIZE } from "./Game";
 import GuessLetterView from "./GuessLetterView";
 
