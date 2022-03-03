@@ -1,7 +1,7 @@
 import React from "react";
+import PostList from "../components/PostList/postList";
 import PostForm from "../components/PostForm/PostForm";
 import './Home';
-import PostList from "../components/PostList/postList";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_POSTS } from "../utils/queries";
