@@ -2,20 +2,19 @@
   border: 2px solid #252525;
   width: 48px;
   height: 40px;
-
   font-size: 20px;
   font-weight: bolder;
 }
 
 .typing {
   border: 3px solid #252525;
-  background-color: #f4f3f1;
+  background-color: white;
   color: #252525;
 }
 
 .disabled {
   border: 1px solid #252525;
-  background-color: #f4f3f1;
+  background-color: white;
   color: #252525;
 }
 

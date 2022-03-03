@@ -1,8 +1,8 @@
 import "../../styles/Header.css";
 import {
   BsFillBarChartLineFill,
-  BsFillGearFill,
-  BsQuestionLg,
+  BsGear,
+  BsQuestionCircle,
   BsGithub,
 } from "react-icons/bs";
 import HowToPlayScreen from "./HowToPlayScreen";
@@ -56,7 +56,7 @@ function Header() {
           className="header-button rounded d-flex align-items-center justify-content-center py-2 me-2"
           onClick={() => setIsHowToPlayOpen(true)}
         >
-          <BsQuestionLg />
+          <BsQuestionCircle />
         </button>
 
         <button
@@ -82,7 +82,7 @@ function Header() {
           className="header-button rounded d-flex align-items-center justify-content-center py-2"
           onClick={() => setIsSettingsOpen(true)}
         >
-          <BsFillGearFill />
+          <BsGear />
         </button>
       </div>
     </div>
