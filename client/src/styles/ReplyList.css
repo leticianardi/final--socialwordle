@@ -1,49 +1,49 @@
 body{
-    font-family: 'Darker Grotesque', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #3c424f;
+    font-family: 'Darker Grotesque', sans-serif !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background: #3c424f !important;
   }
   .commentBox{
-    margin-top: 40px;
-    max-width: 700px;
-    padding: 0px 0px 20px 0px;
-    border-radius: 20px;
-    background: #1b212d;
+    margin-top: 40px !important;
+    max-width: 700px !important;
+    padding: 0px 0px 20px 0px !important;
+    border-radius: 20px !important;
+    background: #1b212d !important;
   }
   .post{
     background: #fff;
-    padding: 20px;
-    border-radius: 20px;
+    padding: 20px !important;
+    border-radius: 20px !important;
   }
   .postBody{
-    display: flex;
+    display: flex !important;
   }
   .postHeader{
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
   }
   .publishDate{
-    color: #787878;
-    margin-left: 15px;
+    color: #787878 !important;
+    margin-left: 15px !important;
   }
   .postDesc{
-    margin-top: 15px;
+    margin-top: 15px !important;
   }
   i{
-    color: #fc6f20;
-    padding-right: 5px;
+    color: #fc6f20 !important;
+    padding-right: 5px !important;
   }
   
   .fa-heart:hover::after{
-    position: absolute;
-      margin-top: -4px;
-      margin-left: -20px;
-      content: "❤";
-      font-size: 24px;
-      opacity: 1;
-      animation: hearts .7s ease;
+    position: absolute !important;
+      margin-top: -4px !important;
+      margin-left: -20px !important;
+      content: "❤" !important;
+      font-size: 24px !important;
+      opacity: 1 !important;
+      animation: hearts .7s ease !important;
     
   } 
   @keyframes hearts {
@@ -52,119 +52,119 @@ body{
   }
   
   .postText{
-    font-weight: 500;
+    font-weight: 500 !important;
   }
   .desc{
-    margin-right: 20px;
+    margin-right: 20px !important;
   }
   .comment{
-    padding: 10px;
-    margin: 20px 30px;
-    color: #fff;
+    padding: 10px !important;
+    margin: 20px 30px !important;
+    color: #fff !important;
   }
   form{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
+    margin-top: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
   h2{
-    margin:0;
-    margin-bottom: 5px;
+    margin:0 !important;
+    margin-bottom: 5px !important;
   }
   h3{
-    margin:0;
+    margin:0 !important;
   }
   input{
-    font-family: 'Darker Grotesque', sans-serif;
-    font-size: 18px;
-    border-radius: 15px;
-    border: 1px solid #787878;
-    padding: 5px 5px 5px 10px;
-    transition: 0.2s;
+    font-family: 'Darker Grotesque', sans-serif !important;
+    font-size: 18px !important;
+    border-radius: 15px !important;
+    border: 1px solid #787878 !important;
+    padding: 5px 5px 5px 10px !important;
+    transition: 0.2s !important;
   }
   input:focus{
-    outline: none;
-    border: 1px solid #fc6f20;
+    outline: none !important;
+    border: 1px solid #fc6f20 !important;
   }
   input::placeholder{
-    color: #bebebe;
+    color: #bebebe !important;
   }
   textarea{
-    font-family: 'Darker Grotesque', sans-serif;
-    margin-top: 10px;
-    border-radius: 15px;
-    border: 1px solid #787878;
-    padding: 5px 5px 5px 10px;
-    height: 70px;
-    transition: 0.2s;
-    box-sizing: border-box;
-    resize: none;
+    font-family: 'Darker Grotesque', sans-serif !important;
+    margin-top: 10px !important;
+    border-radius: 15px !important;
+    border: 1px solid #787878 !important;
+    padding: 5px 5px 5px 10px !important;
+    height: 70px !important;
+    transition: 0.2s !important;
+    box-sizing: border-box !important;
+    resize: none !important;
   }
   textarea:focus{
-    outline: none;
-    border: 1px solid #fc6f20;
+    outline: none !important;
+    border: 1px solid #fc6f20 !important;
   }
   textarea::placeholder{
-    color: #bebebe;
+    color: #bebebe !important;
   }
   button{
-    font-family: 'Darker Grotesque', sans-serif;
-    color: #054231;
-    width: 160px;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px;
-    padding-top: 7px;
-    transition: 0.5s;
-    cursor: pointer;
-    border-radius: 15px;
-    border: none;
-    background: #fc6f20;
-    margin-top: 20px;
-    box-shadow: 0px 5px 0px 0px #fc6f207a;
+    font-family: 'Darker Grotesque', sans-serif !important;
+    color: #054231 !important;
+    width: 160px !important;
+    color: #fff !important;
+    font-size: 18px !important;
+    padding: 10px !important;
+    padding-top: 7px !important;
+    transition: 0.5s !important;
+    cursor: pointer !important;
+    border-radius: 15px !important;
+    border: none !important;
+    background: #fc6f20 !important;
+    margin-top: 20px !important;
+    box-shadow: 0px 5px 0px 0px #fc6f207a !important;
   }
   button:hover{
-    box-shadow: none;
-    transform: translateY(5px);
-    transition: all .1s linear;
+    box-shadow: none !important;
+    transform: translateY(5px) !important;
+    transition: all .1s linear !important;
   }
   button:focus{
-    outline: none;
+    outline: none !important;
   }
   img{
-    max-width: 90px;
-    width: 100%;
-    height: 100%;
-    margin-right: 15px;
-    border-radius: 10px;
+    max-width: 90px !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin-right: 15px !important;
+    border-radius: 10px !important;
   }
   .comment{
-    display: flex;
+    display: flex !important;
   }
   .commentPic{
-    max-width: 45px;
-    max-height: 45px;
+    max-width: 45px !important;
+    max-height: 45px !important;
   }
   .commentHeader{
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
   }
   .commentBody{
-    max-width: 580px;
-    overflow-wrap: break-word;
+    max-width: 580px !important;
+    overflow-wrap: break-word!important;
   }
   .fa-instagram{
-    position: absolute;
-    color: #fc6f20;
-    top: 3%;
-    right: 2%;
-    font-size: 38px;
+    position: absolute !important;
+    color: #fc6f20!important;
+    top: 3%!important;
+    right: 2% !important;
+    font-size: 38px !important;
   }
   .fa-instagram:hover{
-    font-size: 42px;
-    color: #fff;
-    transition: all .1s linear;
-    cursor: pointer;
+    font-size: 42px !important;
+    color: #fff !important;
+    transition: all .1s linear !important;
+    cursor: pointer !important;
   }
   
   

@@ -7,6 +7,7 @@ import { ADD_FRIEND } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 import PostForm from "../components/PostForm/PostForm";
+import PostList from "../components/PostList/postList";
 import FriendList from "../components/FriendList/Friends";
 import "../styles/Profile.css";
 
