@@ -14,7 +14,7 @@
 }
 
 .right {
-  background-color: #51b36e;
+  background-color: #07bc0c;
   color: #f4f3f1;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .right:disabled {
-  background-color: rgba(81, 179, 110, 0.65);
+  background-color: #07bc0c;
 }
 
 .right.colorblind:disabled {
@@ -31,7 +31,7 @@
 }
 
 .wrong {
-  background-color: #943e3c;
+  background-color: #afb3b2;
   color: #f4f3f1;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .wrong:disabled {
-  background-color: rgba(148, 62, 60, 0.65);
+  background-color: #afb3b2;
 }
 
 .wrong.colorblind:disabled {
@@ -48,7 +48,7 @@
 }
 
 .displaced {
-  background-color: #c79c2e;
+  background-color: #f1c40f;
   color: #f4f3f1;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .displaced:disabled {
-  background-color: rgba(199, 156, 46, 0.65)
+  background-color: #f1c40f
 }
 
 .displaced.colorblind:disabled {

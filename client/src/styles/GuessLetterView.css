@@ -21,7 +21,7 @@
 
 .wrong {
   border: 1px solid #252525;
-  background-color: #943e3c;
+  background-color: #afb3b2;
   color: #f4f3f1;
 }
 
@@ -31,7 +31,7 @@
 
 .right {
   border: 1px solid #252525;
-  background-color: #51b36e;
+  background-color: #07bc0c;
   color: #f4f3f1;
 }
 
@@ -42,7 +42,7 @@
 
 .displaced {
   border: 1px solid #252525;
-  background-color: #c79c2e;
+  background-color: #f1c40f;
   color: #f4f3f1 !important;
 }
 

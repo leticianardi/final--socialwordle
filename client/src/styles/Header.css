@@ -1,24 +1,22 @@
-* {
-  background-color: white;
-}
 .header-button {
+  background-color: #f4f3f1;
   border: solid 1px #252525;
+
   font-size: 150%;
   padding: 5px;
 }
 
 .app-name {
-  font-family: 'Raleway', sans-serif;  
+  font-family: 'Raleway', sans-serif;
   font-size: 270%;
-  font-weight: bold;
 }
 
 .letter-green {
-  color: #51b36e;
+  color: #07bc0c;
 }
 
 .letter-green.colorblind {
-  color: #2271B2;
+  color: #2271b2;
 }
 
 .letter-red {
@@ -30,9 +28,9 @@
 }
 
 .letter-yellow {
-  color: #c79c2e;
+  color: #f1c40f;
 }
 
 .letter-yellow.colorblind {
-  color: #D55E00;
+  color: #d55e00;
 }
