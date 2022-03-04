@@ -15,7 +15,7 @@ import Score from "./components/Score/Score";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/SignUp";
-import SinglePost from "./pages/SinglePost"; 
+import SinglePost from "./pages/SinglePost";
 import Frontpage from "./pages/Frontpage";
 import Game from "./pages/Game";
 import Profile from "./pages/Profile";
@@ -44,11 +44,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div>
           <Topbar />
           <div className="container">
-            <div>{/* <Nav /> */}</div>
-            <div></div>
             <Switch>
               <Route exact path="/" component={Frontpage} />
               <Route exact path="/home" component={Home} />
@@ -57,11 +55,13 @@ function App() {
               <Route exact path="/play" component={Game} />
               <Route exact path="/score" component={Score} />
               <Route exact path="/profile/:username?" component={Profile} />
-              <Route exact path="/post/:id" component={SinglePost} /> 
+              <Route exact path="/post/:id" component={SinglePost} />
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>
-        <Route exact path="/" component={Footer} />
+          <div>
+            <Footer />
+          </div>
         </div>
       </Router>
     </ApolloProvider>

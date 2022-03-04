@@ -1,17 +1,18 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .post-form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5px;
 }
 
 .posts-container {
   margin-top: 1px;
 }
 
-button {
-  padding: 5px;
-  font-weight: 500;
-  cursor: pointer;
-  width: 15%;
-  border: 2px solid green;
-  border-radius: 2px;
-}

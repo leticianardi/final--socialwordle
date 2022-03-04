@@ -24,7 +24,7 @@ const PostList = ({ posts, title }) => {
             <div className="card-body">
               <Link to={`/post/${post._id}`}>
                 <p>{post.postText}</p>
-                <p className="mb-0">
+                <p className="reply-count">
                   Replies: {post.replyCount} || Click to{" "}
                   {post.replyCount ? "see the guesses" : "start guessing"}.
                 </p>

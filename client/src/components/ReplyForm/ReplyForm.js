@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { useMutation } from "@apollo/client";
 import { ADD_REPLY } from "../../utils/mutations";
+import"../../styles/ReplyForm.css"
 
 const ReplyForm = ({ postId }) => {
   const [replyBody, setBody] = useState("");
@@ -30,7 +31,7 @@ const ReplyForm = ({ postId }) => {
   };
 
   return (
-    <div>
+    <div className="reply-container">
       <div>
         <p className={`${characterCount === 280 || error ? "text-error" : ""}`}>
           {characterCount}/280
@@ -45,7 +46,7 @@ const ReplyForm = ({ postId }) => {
             value={replyBody}
             onChange={handleChange}
           ></textarea>
-          <button type="submit">Submit</button>
+          <button className="button-6" type="submit">Submit</button>
         </form>
         {error && <div>Something went wrong...</div>}
       </div>

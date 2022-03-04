@@ -73,7 +73,7 @@ const resolvers = {
     },
     deleteUser: async (parent, args, context) => {
       if (context.user) {
-        const deleteUser = await User.findByIdAndDelete({ _id: args._id });
+        await User.findByIdAndDelete({ _id: args._id });
       }
       throw new AuthenticationError("Incorrect credentials");
     },
@@ -97,16 +97,16 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
 
-    // deletePost: async (parente, args, context) => {
+    // deletePost: async (parente, postId, context) => {
     //   if (context.user) {
     //     const deletePost = await User.findByIdAndUpdate(
-    //       { _id: context.post._id },
+    //       { _id: context.user._id },
     //       { $pull: { posts: post._id } },
     //       { new: true }
     //     );
-    //     return Post.findByIdAndDelete({ ...args });
+    //     return deletePost;
     //   }
-    //   return deletePost;
+    //   throw new AuthenticationError("Incorrect credentials");
     // },
 
     addReply: async (parent, { postId, replyBody }, context) => {

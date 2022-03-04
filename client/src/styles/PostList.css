@@ -4,16 +4,21 @@ a {
 }
 
 .container {
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .card-box {
  padding: 10px;
- border: 1px black solid;
+ border: 2px black solid;
  margin-bottom: 10px;
 }
 
+.reply-count {
+  border-top:  1px solid black;
+  }
+
 .card-title {
  border-bottom: 1px black solid;
- color: black;
+ color: clack
 }

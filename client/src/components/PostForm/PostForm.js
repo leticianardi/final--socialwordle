@@ -49,7 +49,7 @@ const PostForm = () => {
   };
 
   return (
-    <div className="containeir">
+    <div className="container">
       <div className="container-form">
         <div className="form-title">
           <p>Don't share the word of the day.</p>
@@ -68,7 +68,7 @@ const PostForm = () => {
           {characterCount}/280
           {error && <span className="ml-2">Something went wrong...</span>}
         </p>
-        <button type="submit">Submit</button>
+        <button className="button-6" type="submit">Guess</button>
       </form>
     </div>
   );

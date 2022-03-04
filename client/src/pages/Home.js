@@ -1,7 +1,7 @@
 import React from "react";
 import PostList from "../components/PostList/postList";
 import PostForm from "../components/PostForm/PostForm";
-import './Home';
+import "../styles/Home.css";
 
 import { useQuery } from "@apollo/client";
 import { QUERY_POSTS } from "../utils/queries";
@@ -21,20 +21,22 @@ const Home = () => {
   const loggedIn = Auth.loggedIn();
 
   return (
-    <main>
-      <div>
+    <main className="home-container">
+      <div className="post-form">
         {loggedIn && (
           <div>
             <PostForm />
           </div>
         )}
 
-        <div className={` col-12 mb-3 ${loggedIn}`}>
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <PostList posts={posts} title="Guesses for today:" />
-          )}
+        <div className={` ${loggedIn}`}>
+          <div className="posts-container">
+            {loading ? (
+              <div>Loading...</div>
+            ) : (
+              <PostList posts={posts} title="Guesses for today:" />
+            )}
+          </div>
         </div>
 
         {/* {loggedIn && userData ? (
