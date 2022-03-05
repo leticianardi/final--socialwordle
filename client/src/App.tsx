@@ -8,7 +8,7 @@ import {
 } from "@apollo/client";
 
 // declare module?
-import './declare_modules.d.ts'
+import "./declare_modules.d.ts";
 // import ReactRouterDom from 'react-router-dom;
 
 import { setContext } from "@apollo/client/link/context";
