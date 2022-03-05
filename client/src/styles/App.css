@@ -10,7 +10,7 @@ body {
 }
 
 
-@font-face {
+/* @font-face {
   font-family: 'Raleway';
   src: local('Raleway'), url(../fonts/Raleway-Black.ttf) format('truetype');
 }
@@ -23,5 +23,5 @@ body {
 @font-face {
   font-family: 'Raleway';
   src: local('Raleway'), url(../fonts/Raleway-Thin.ttf) format('truetype');
-}
+} */
 
