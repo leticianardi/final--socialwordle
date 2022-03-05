@@ -11,7 +11,7 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Topbar from "./components/Topbar/Topbar";
-import Score from "./components/Score/Score";
+// import Score from "./components/Score/Score";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/SignUp";
@@ -55,7 +55,7 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/play" component={Game} />
-              <Route exact path="/score" component={Score} />
+              {/* <Route exact path="/score" component={Score} /> */}
               <Route exact path="/profile/:username?" component={Profile} />
               <Route exact path="/post/:id" component={SinglePost} />
               <Route exact path="/portuguese" component={GamePt} />
