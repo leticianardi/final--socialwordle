@@ -1,6 +1,12 @@
 {
   "short_name": "Worlingo",
   "name": "Worlingo - guess a new word every day",
+  "icons": [
+    {"src": "favicon.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    }
+  ],
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#51b36e",
