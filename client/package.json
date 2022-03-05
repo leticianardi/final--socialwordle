@@ -26,7 +26,7 @@
     "start": "react-scripts start",
     "predeploy": "GENERATE_SOURCEMAP=false react-scripts build",
     "deploy": "gh-pages -d build",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
