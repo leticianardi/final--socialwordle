@@ -9,3 +9,19 @@ body {
   padding-top: 1rem;
 }
 
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../fonts/Raleway-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../fonts/Raleway-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../fonts/Raleway-Thin.ttf) format('truetype');
+}
+

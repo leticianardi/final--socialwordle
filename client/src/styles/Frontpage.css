@@ -1,3 +1,7 @@
+.modal-title {
+  font-family: Raleway, Arial, serif;
+  font-weight: black;
+}
 .front-section {
   display: flex;
   height: 70%;
@@ -80,7 +84,7 @@
   }
 } */
 
-.front-img-bg {
+/* .front-img-bg {
   clip-path: circle(50% at 50% 50%);
   background-color: black;
   width: 100%;
@@ -89,7 +93,7 @@
   top: 0;
   right: 0;
   opacity: 30%;
-}
+} */
 
 .front-img {
   width: 100%;
