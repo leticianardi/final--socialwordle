@@ -22,6 +22,6 @@
     "dotenv": "^16.0.0",
     "jsonwebtoken": "^8.5.1",
     "postbuild": "^2.1.0",
-    "react-router-dom": "^6.2.2"
+    "react-router-dom": "^5.2.0"
   }
 }
