@@ -1,7 +1,7 @@
 {
   "short_name": "Worlingo",
   "name": "Worlingo - guess a new word every day",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#51b36e",
   "background_color": "#f4f3f1"
