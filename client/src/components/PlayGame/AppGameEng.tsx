@@ -1,7 +1,10 @@
 import GameEng from "./GameEng";
 import Header from "./Header";
-import '../../styles/App.css';
-import { GlobalSettingsContext, useGlobalSettings } from "../../hooks/useGlobalSettings";
+import "../../styles/App.css";
+import {
+  GlobalSettingsContext,
+  useGlobalSettings,
+} from "../../hooks/useGlobalSettings";
 import { StatisticsContext, useStatistics } from "../../hooks/useStatistics";
 
 function AppGameEng() {
@@ -10,14 +13,12 @@ function AppGameEng() {
 
   return (
     <StatisticsContext.Provider value={statistics}>
-    <GlobalSettingsContext.Provider value={globalSettings}>
-
-      <div className="app-container">
-        <Header />
-        <GameEng />
-      </div>
-
-    </GlobalSettingsContext.Provider>
+      <GlobalSettingsContext.Provider value={globalSettings}>
+        <div className="app-container">
+          <Header />
+          <GameEng />
+        </div>
+      </GlobalSettingsContext.Provider>
     </StatisticsContext.Provider>
   );
 }

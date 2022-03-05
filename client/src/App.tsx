@@ -19,6 +19,8 @@ import SinglePost from "./pages/SinglePost";
 import Frontpage from "./pages/Frontpage";
 import Game from "./pages/Game";
 import Profile from "./pages/Profile";
+import GamePt from "./pages/GamePt";
+import GameEng from "./pages/GameEng";
 import Footer from "./components/Footer/Footer";
 
 const httpLink = createHttpLink({
@@ -56,6 +58,9 @@ function App() {
               <Route exact path="/score" component={Score} />
               <Route exact path="/profile/:username?" component={Profile} />
               <Route exact path="/post/:id" component={SinglePost} />
+              <Route exact path="/portuguese" component={GamePt} />
+              <Route exact path="/english" component={GameEng} />
+
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>

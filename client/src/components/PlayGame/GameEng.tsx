@@ -56,7 +56,7 @@ const updateKeyboardButtonStates = (
   };
 };
 
-function Game() {
+function GameEng() {
   const [statistics, setStatistics] = useContext(StatisticsContext);
 
   const [{ date: savedDate, guesses, winState, letterStates }, setSavedGame] =
@@ -320,4 +320,4 @@ function Game() {
   );
 }
 
-export default Game;
+export default GameEng;
