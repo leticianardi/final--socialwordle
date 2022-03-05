@@ -13,7 +13,10 @@ import {
   KeyboardLetterStates,
   SavedDailyGame,
 } from "../../models";
-import { getDailyWord, getLast, getToday, wordList } from "../../utils";
+import { getDailyWordEng } from "../../utils/dailyword-eng.util";
+import { wordlistEng } from "../../utils/wordlistEng.util";
+import { getLast, getToday } from "../../utils";
+
 import EndGameScreen from "./EndGameScreen";
 import GuessList from "./GuessList";
 import Keyboard from "./Keyboard";
@@ -71,7 +74,7 @@ function Game() {
   const [isEndGameScreenOpen, setIsEndGameScreenOpen] =
     useState<boolean>(false);
 
-  const dailyWord = useMemo<DailyWord>(() => getDailyWord(), []);
+  const dailyWord = useMemo<DailyWord>(() => getDailyWordEng(), []);
 
   const updateStatistics = (isGameWon: boolean, guessesAmount: number) => {
     const newStreak = isGameWon ? statistics.currentStreak + 1 : 0;
@@ -101,7 +104,7 @@ function Game() {
       .map((guess) => guess.letter)
       .join("");
 
-    return wordList.includes(lastGuessWord);
+    return wordlistEng.includes(lastGuessWord);
   };
 
   const updateLetterState = (

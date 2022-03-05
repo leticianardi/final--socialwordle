@@ -59,9 +59,7 @@ function App() {
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>
-          <div>
-            <Footer />
-          </div>
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
