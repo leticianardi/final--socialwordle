@@ -48,7 +48,7 @@ function App() {
       <Router>
         <div>
           <Topbar />
-          <div className="container">
+          <main className="container">
             <Switch>
               <Route exact path="/" component={Frontpage} />
               <Route exact path="/home" component={Home} />
@@ -63,7 +63,7 @@ function App() {
 
               {/* <Route component={NoMatch} /> */}
             </Switch>
-          </div>
+          </main>
           {/* <Footer /> */}
         </div>
       </Router>
