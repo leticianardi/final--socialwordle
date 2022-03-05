@@ -21,6 +21,7 @@
     "build": "^0.1.4",
     "dotenv": "^16.0.0",
     "jsonwebtoken": "^8.5.1",
-    "postbuild": "^2.1.0"
+    "postbuild": "^2.1.0",
+    "react-router-dom": "^6.2.2"
   }
 }
