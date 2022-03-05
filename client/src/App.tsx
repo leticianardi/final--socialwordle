@@ -21,7 +21,7 @@ import Game from "./pages/Game";
 import Profile from "./pages/Profile";
 import GamePt from "./pages/GamePt";
 import GameEng from "./pages/GameEng";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -64,7 +64,7 @@ function App() {
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
     </ApolloProvider>
