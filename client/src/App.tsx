@@ -10,7 +10,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// import Topbar from "./components/Topbar/Topbar";
+import Topbar from "./components/Topbar/Topbar";
 // import Score from "./components/Score/Score";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -47,7 +47,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          {/* <Topbar /> */}
+          <Topbar />
           <div className="container">
             <Switch>
               <Route exact path="/" component={Frontpage} />
