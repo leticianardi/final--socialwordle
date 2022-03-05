@@ -8,7 +8,7 @@ import {
 } from "@apollo/client";
 
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Topbar from "./components/Topbar/Topbar";
 // import Score from "./components/Score/Score";
@@ -49,20 +49,18 @@ function App() {
         <div>
           <Topbar />
           <main className="container">
-            <Switch>
-              <Route exact path="/" component={Frontpage} />
-              <Route exact path="/home" component={Home} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/play" component={Game} />
-              {/* <Route exact path="/score" component={Score} /> */}
-              <Route exact path="/profile/:username?" component={Profile} />
-              <Route exact path="/post/:id" component={SinglePost} />
-              <Route exact path="/portuguese" component={GamePt} />
-              <Route exact path="/english" component={GameEng} />
+            <Route path="/" exact component={Frontpage} />
+            <Route path="/home" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/play" component={Game} />
+            {/* <Route exact path="/score" component={Score} /> */}
+            <Route path="/profile/:username?" component={Profile} />
+            <Route path="/post/:id" component={SinglePost} />
+            <Route path="/portuguese" component={GamePt} />
+            <Route path="/english" component={GameEng} />
 
-              {/* <Route component={NoMatch} /> */}
-            </Switch>
+            {/* <Route component={NoMatch} /> */}
           </main>
           {/* <Footer /> */}
         </div>
